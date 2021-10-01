@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    {% if form.errors %}
+    <p>Invalid Email or Password.</p>
+    {% endif %}
+
+    {% if next %}
+    <p>Hey, you cant access that page.</p>
+    {% endif %}
+
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+
+        <p>Username: </p>{{ form.username }} 
+        <p>Password: </p>{{ form.password }}
+
+        <input type="submit" value="login">
+        <input type="hidden" value="{{ next }}" name="next">
+    </form>
+
+</body>
+</html>
