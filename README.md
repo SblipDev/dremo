@@ -17,6 +17,46 @@
   </p>
 </p>
 
+## Installation and Running the COde.
+
+#### Python side: 
+
+use pip to install all the dependencies.
+
+```
+$ pip install -r requirements.txt
+```
+
+After the dependencies are installed, run the following commands. 
+
+```
+$ python3 manage.py migrate
+$ python3 manage.py runserver
+```
+
+If the following commands execute without any problems, the backend server has started. Now keep the server running as we go to the javascript instructions.
+
+#### Javascript Side
+
+Go in the frontend/ directory of the repository using this command, 
+
+```
+$ cd frontend/
+``` 
+
+and to install all the dependencies, run this command ->
+
+```
+$ npm install
+```
+
+now we have to run the server ->
+
+```
+$ npm run serve
+```
+
+Please keep sure that both the servers are running, then open `http://localhost:8000` or `http://127.0.0.1:8000`. If its working, you will be able to see the home page.
 
 ## License
 
