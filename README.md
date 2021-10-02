@@ -17,7 +17,7 @@
   </p>
 </p>
 
-## Installation and Running the COde.
+## Installation and Running the code.
 
 #### Python side: 
 
