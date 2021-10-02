@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path, include
-from dremo.views import IndexView, signup
+from dremo.views import IndexView, signup, AccountActivationSentView, activate
 # from users.views import main
 
 urlpatterns = [
@@ -23,6 +23,9 @@ urlpatterns = [
     path('api/', include('dremo.api.urls')),
     path('', include('django.contrib.auth.urls')),
     path('signup/', signup, name='signup'),
+    path('account_activation_sent/', AccountActivationSentView.as_view(), name='account_activation_sent'),
+    path(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
+        activate, name='activate'),
     # path('api/user/info/status', main),
     path('', IndexView.as_view(), name='home')
 ]

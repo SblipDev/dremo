@@ -153,3 +153,12 @@ CORS_ORIGIN_ALLOW_ALL=True
 # AUTH_USER_MODEL = 'users.CustomUser'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+from .dotdoe import *
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'UR EMAIL SHOULD BE HERE'
+EMAIL_HOST_PASSWORD = 'UR PASSWORD SHOULD BE HERE MATEY'
+EMAIL_PORT = 587
