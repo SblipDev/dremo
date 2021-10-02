@@ -1,4 +1,4 @@
-asgiref==3.3.1
+asgiref==3.2.10
 beautifulsoup4==4.9.3
 certifi==2020.12.5
 cffi==1.14.5
@@ -6,15 +6,17 @@ chardet==4.0.0
 confusable-homoglyphs==3.2.0
 cryptography==3.4.6
 defusedxml==0.6.0
-Django==3.0.8
+Django==3.1.5
 django-allauth==0.44.0
 django-bootstrap4==2.3.1
+django-cors-headers==3.8.0
 django-registration==3.1.1
 django-rest-auth==0.9.5
 django-rest-framework==0.1.0
-django-webpack-loader==0.7.0
+django-webpack-loader==0.6.0
 djangorestframework==3.12.2
 idna==2.10
+importlib-metadata==2.1.1
 oauthlib==3.1.0
 pycparser==2.20
 PyJWT==2.0.1
@@ -26,3 +28,4 @@ six==1.15.0
 soupsieve==2.2
 sqlparse==0.4.1
 urllib3==1.26.3
+zipp==3.5.0
