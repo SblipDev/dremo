@@ -15,13 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path, include
-from dremo.views import IndexView
+from dremo.views import IndexView, signup
 # from users.views import main
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('dremo.api.urls')),
     path('', include('django.contrib.auth.urls')),
+    path('signup/', signup, name='signup'),
     # path('api/user/info/status', main),
-    path('', IndexView.as_view())
+    path('', IndexView.as_view(), name='home')
 ]

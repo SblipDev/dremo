@@ -8,22 +8,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <style>
-        body,
-        html {
-            height: 100%;
-            width: 100%;
+        .home {
+            position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding-left:60vh;
+            padding-right:60vh;
         }
 
-        .home{
-            background: linear-gradient(grey, black);
-            min-height: 100vh;
+        .page{
+            background: linear-gradient(to bottom right, grey, black);
+            height: 100vh;
+            color:white;
+            font-family: 'Josefin Sans', sans-serif;
         }
-
     </style>
 
-    <title>Dremo</title>
+    <title>Dremo Community App</title>
 </head>
 
 <body>
@@ -36,12 +44,12 @@
 
     {% if request.user.is_authenticated %}
     <div id="app"></div>
-    
+
     {% render_bundle 'app' %}
     {% else %}
 
-    <div class="container-ml">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="page">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
                 aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -50,17 +58,20 @@
                 <!-- <img src="https://dremo.sblip.dev/images/logo.png" width="40" height="40" class="d-inline-block align-top" alt=""> -->
                 Dremo
             </a>
-            
+
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
                         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="/explore/">Explore</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="/login/">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/sigunp/">Get Started</a>
+                        <a class="nav-link" href="/signup/">Get Started</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link disabled" href="#">Disabled</a>
@@ -68,12 +79,22 @@
                 </ul>
             </div>
         </nav>
+        <div id="logout"></div>
         <div class="home">
+            <img src="https://dremo.sblip.dev/images/logo.png" width="250" height='250'><br>
+            <h1>Dremo</h1><br>
+            <h4>Dremo is a community app in which you can join several communities, post stuff you find interesting, comment and have
+            fun!</h4><br>
+            <h4 style="font-family: monospace; ">CURRENTLY IN DEVELOPMENT</h4><br>
+            <a class="nav-link" href="/signup/">
+                <button class="btn btn-outline-light" height="200">
+                    Get Started With Dremo.
+                </button>
+            </a>
         </div>
     </div>
 
     {% endif %}
-
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -85,6 +106,25 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script>
+        function $_GET(q, s) {
+                s = (s) ? s : window.location.search;
+                var re = new RegExp('&amp;' + q + '=([^&amp;]*)', 'i');
+                return (s = s.replace(/^\?/, '&amp;').match(re)) ? s = s[1] : s = '';
+        }
 
+        var value = $_GET('logout');
+        if (value == "true"){
+            alert("You have been logged out!")
+        }
+
+        var sadness = $_GET('sad')
+
+        if (sadness == "true") {
+                alert("Hello. Have a nice day! :) Here is a digital cookie 🍪 for you!")
+            }
+
+    </script>
 </body>
+
 </html>
