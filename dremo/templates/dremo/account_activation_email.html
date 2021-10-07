@@ -1,7 +1,14 @@
 {% autoescape off %}
 Hi {{ user.username }},
 
-Please click on the link below to confirm your registration:
+Welcome to the community {{ user.username }}! It makes me very happy to have you on the site.
+
+Please click on the link below to confirm your registration on the site:
 
 http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+
+Thanks again for registering and may you have a nice day!
+
+Regards, Dremo Team. https://dremo.sblip.dev
+If you find this email in error, please ignore it and I also hope you have a nice day too :)
 {% endautoescape %}

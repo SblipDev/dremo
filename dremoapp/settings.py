@@ -134,9 +134,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SITE_ID = 1
@@ -159,6 +156,7 @@ from .dotdoe import *
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'UR EMAIL SHOULD BE HERE'
-EMAIL_HOST_PASSWORD = 'UR PASSWORD SHOULD BE HERE MATEY'
+# Less secure apps access should be enabled for your google account.
+EMAIL_HOST_USER = 'UR EMAIL HERE'
+EMAIL_HOST_PASSWORD = 'UR EMAIL PASSWORD HERE'
 EMAIL_PORT = 587
