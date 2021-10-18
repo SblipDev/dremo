@@ -6,7 +6,7 @@
   </a>
 
   <h2 align="center">Dremo</h3>
-    <h4 align="center">CURRENTLY IN DEVELOPMENT</h2>
+    <h4 align="center">CURRENTLY ABANDONED. :(</h2>
   <p align="center">
     Dremo is a community app in which you can join several communities, post stuff you like, comment and just have fun!
     <br />
