@@ -1,12 +1,12 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="http://dremo.sblip.dev">
+<!--   <a href="http://dremo.sblip.dev">
     <img src="https://dremo.sblip.dev/images/logo.png" alt="Logo" width="200" height="200">
-  </a>
+  </a> -->
 
   <h2 align="center">Dremo</h3>
-    <h4 align="center">CURRENTLY ABANDONED. :(</h2>
+    <h4 align="center">IN DEVELOPMENT</h2>
   <p align="center">
     Dremo is a community app in which you can join several communities, post stuff you like, comment and just have fun!
     <br />
